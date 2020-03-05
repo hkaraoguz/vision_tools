@@ -46,8 +46,6 @@ def xml_to_csv(xml_path,image_filepath,image_filename,f,labels = None):
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
-    #labels =[14,15,16,17,18,19,20,22,23,25,29,32,67]
-
     for obj in root.iter('object'):
         aline = {}
         for child in obj:
